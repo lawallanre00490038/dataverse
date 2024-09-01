@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSIGHT</title>
+    <meta name="csrf-token" content="lWdCA84efSKONvHuPyl9nV30QKHzV9RsjyS2btIX">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://kit.fontawesome.com/db7da03a5d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<style>
+.error{
+color: #FF0000; 
+}
+.alert {
+  padding: 10px;
+  background-color: #04AA6D;
+  color: white;
+}
+.alert-danger{
+    margin-left: 440px !important;
+    margin-right: 450px !important;
+    border-radius: 10px !important;
+    background-color: #cb2126 !important;
+}
+body main .modal form div p{
+    margin-left: 13% !important;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+body main .modal {
+    height: auto !important;
+    width: auto ;
+    padding: 0rem !important;
+    background: none ;
+}
+
+ .embed-responsive-item{
+     width: 760px;
+     height: 515px;
+ } 
+
+ @media  only screen and (max-width: 600px) {
+    .embed-responsive-item{
+     width: 560px;
+     height: 315px;
+    }
+     body main .modal {
+      width: auto ;
+     }
+     
+     body main .modal form div p{
+    margin-left: 5% !important;
+    }
+    
+    .fa {
+        visibility: hidden;
+    }
+    
+    .fa-envelope {
+        visibility: hidden;
+    }
+    body main .modal form button {
+        width: 90%;
+    }
+ }
+body main .modal .modal-header{
+    padding: 20px;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+    
+    $("body").click(function() {
+       if ($(".fade").is(":visible")) {
+           $(".modal").hide().trigger('pause');
+       }
+    });
+
+
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url = $("#cartoonVideo").attr('src');
+    
+    /* Remove iframe src attribute on page load to
+    prevent autoplay in background */
+    $("#cartoonVideo").attr('src', '');
+	
+	/* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed */
+    $("#myModal").on('shown.bs.modal', function(){
+        $("#cartoonVideo").attr('src', url);
+    });
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#myModal").on('hide.bs.modal', function(){
+        $(".cartoonVideo").attr('src', '');
+    });
+});
+
+
+</script>
+
+
+</head>
+    <body >
+        <main>
+                      <div id="myModal7" class="modal"  style=" background-color: #fff;"  >
+                  <style scoped>
+                      @media  only screen and (max-width: 600px) {
+                          div.modal{
+                              width: 90% !important;
+                          }
+                      }
+                  </style>
+                    <div class="modal-dialog">
+                        <div class="modal-content"> 
+                            <div class="modal-body" >  
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <div class="modal-header">
+                                    <h2 style="margin-left: 15% !important">Personal Information</h2>
+                                    <i class="fa-solid fa-rectangle-xmark" onclick="closeModal()"></i>
+                                </div>
+                                <div class="">
+            						<p id="success_message" class=""></p>
+            					</div>
+                                 <form method="POST" action="https://www.insightpublicis.com/store-form" id="contactUsForm">
+                                    <input type="hidden" name="_token" value="lWdCA84efSKONvHuPyl9nV30QKHzV9RsjyS2btIX">                                    <div class="spacing">
+                                        <p class="spacing">First Name</p>
+                                        <div>
+                                            <i class="fa fa-user"></i>
+                                            <input type="text" name="first_name" id="first_name" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="spacing">Last Name</p>
+                                        <div><i class="fa fa-user"></i><input type="text" name="last_name" id="last_name" required></div>
+                                    </div>
+                                    <div>
+                                        <p class="spacing">Company</p>
+                                        <div><i class="fa fa-building"></i><input type="text" name="company" id="company" required></div>
+                                    </div>
+                                    <div>
+                                        <p class="spacing">Designation</p>
+                                        <div><i class="fa fa-user"></i><input type="text" name="designation" id="designation" required></div>
+                                    </div>
+                                    <div>
+                                        <p class="spacing">Email</p>
+                                        <div><i class="fa-solid fa-envelope"></i><input type="email" name="email" id="email" required></div>
+                                    </div>
+                                    <button type="submit" id="submit">Download Report</button>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html">
+                    <img src="assets/Group&#32;4.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="group-1">
+                <div class="container" style="width: 100%">
+                    <div class="info info-one">
+                        <h1>INSIGHT</h1>
+                        <h1 class="">ON BRANDS</h1>
+                        <p class="p-one">How to win in the <br/>Nigerian market</p>
+                    </div>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DUFapnKtKcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="group-4">
+                <div class="block_container">
+                    <div class="block1">
+                        <p><span>7</span>  insights</br>
+                            to win the </br>
+                            Nigerian</br>
+                            market.</p>
+                    </div>
+                    <div class="block2">
+                        <a href="insight-on-brand.html#first">
+                            Harnessing<br/>
+                            Music as<br/> 
+                            Brand Currency<br/>
+                        </a>
+                    </div>
+                    <div class="block3">
+                        <a href="insight-on-brand.html#fifth">
+                            Building<br/>
+                            Brands<br/>
+                            With<br/>
+                            Purpose<br/>
+                        </a>
+                    </div>
+                    <div class="block4">
+                        <a href="insight-on-brand.html#seventh">
+                            Demystifying<br/>
+                            Influencer<br/>
+                            Marketing<br/>
+                        </a>
+                    </div>
+                </div>
+                <div class="block_container">
+                    <div class="block5">
+                        <a href="insight-on-brand.html#sixth">
+                            Accelerating<br/>
+                            Growth with<br/>
+                            Digital Brands<br/>
+                        </a>
+                    </div>
+                    <div class="block6">
+                        <a href="insight-on-brand.html#second">
+                            Unlocking<br/>
+                            The Power<br/>
+                            Of Youth
+                        </a>
+                    </div>
+                    <div class="block7">
+                        <a href="insight-on-brand.html#fourth">
+                            Winning<br/>
+                            Hearts<br/> 
+                            in the<br/>
+                            Regions<br/>
+                        </a>
+                    </div>
+                    <div class="block8">
+                        <a href="insight-on-brand.html#third">
+                            Crafting<br/>
+                            Global<br/>
+                            African<br/>
+                            Brands<br/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="group-3">
+                <div></div>
+                <div>
+                    <h1>Download the free report</h1>
+                    <p>Get exclusive insight updates straight to your inbox and become a better manager. </p>
+                    <button href="#myModal7" class="" data-toggle="modal">Get the report</button>
+                </div>
+            </div>
+
+                <div id="myModal12" class="modal fade" >
+                    <div class="modal-dialog">
+                        <div class="modal-content"> 
+                            <div class="modal-body">                    
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/fxaCUXzz8RI" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+            <div class="group-5" id="first">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Harnessing
+                        <br/>
+                        Music
+                        <br/>
+                        As Brand
+                        <br/>
+                        Currency
+                    </h1>
+                    <p>
+                        Music is the universal language that connects<br/>  us all. As a brand, how are you harnessing the <br/>power of music?
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal1" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                  
+                </div>
+                <div id="myModal1" class="modal fade" style="width: auto !important ">
+                    <div class="modal-dialog">
+                        <div class="modal-content"> 
+                            <div class="modal-body">                    
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/fxaCUXzz8RI" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo nine">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-6" id="second">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Unlocking
+                        <br/>
+                        The Power
+                        <br/>
+                        Of Youth
+                    </h1>
+                    <p>
+                        They are the definers and defiers.The youths have a voice<br/> and are not afraid to use it. How do you get them to speak<br/>  for your brand in 2022? 
+                    </p>
+                    <div class="link">
+                        <a href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal2" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                  
+                </div>
+                    <div id="myModal2" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/_StV2BAv2t4" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="logo eight">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-12" id="seventh">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Demystifying 
+                        <br/>
+                        Influencer
+                        <br/>
+                        Marketing
+                        <!-- <br/>
+                        Purpose -->
+                    </h1>
+                    <p>
+                        “Follow who know road” is what drives influencer marketing.<br/> Today’s consumers trust who they’re familiar with. As a<br/> brand, how do you use this to your advantage? 
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                   
+                </div> 
+                 <div id="myModal" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/PHlhIyuxPos" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="logo zero">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-8">
+                <div class="info">
+                    <p>Get all the insights you need to anticipate immediate business, <br>brand and consumer expectations.</p>
+                </div>
+                                <form method="POST" action="https://www.insightpublicis.com/store-newsletter" id="contactUsForm">
+                    <input type="hidden" name="_token" value="lWdCA84efSKONvHuPyl9nV30QKHzV9RsjyS2btIX">                    
+                    <input type="email" name="email" id="email" placeholder="Your email here" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="group-9" id="fourth">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Winning 
+                        <br/>
+                        Hearts 
+                        <br/>
+                        In the
+                        <br/>
+                        Regions
+                    </h1>
+                    <p>
+                        Nigerian culture and people are evolving. How do you<br/> harness the strength of Nigeria’s diversity to become a<br/> beloved brand?
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal3" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                    
+                </div>
+                    <div id="myModal3" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/3fHoxiztZuM" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="logo five">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-10" id="fifth">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Building 
+                        <br/>
+                        Brands 
+                        <br/>
+                        With
+                        <br/>
+                        Purpose
+                    </h1>
+                    <p>
+                        Consumers are hungry for new experiences and connections. <br/>Is your reason for being connecting with today’s consumer?                 
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                         <a href="insight-on-brand.html#myModal4" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                    
+                </div>
+                <div id="myModal4" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/kCxsPpBmY88" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="logo">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-11" id="sixth">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Accelerating
+                        <br/>
+                        Growth with 
+                        <br/>
+                        Digital
+                        <!-- <br/>
+                        Purpose -->
+                    </h1>
+                    <p>
+                        Consumers have become digital natives who align themselves<br/> with brands that connect with them digitally. Is your brand<br/>enabling your consumers live the life they want?
+                   
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal5" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                      
+                </div>
+                 <div id="myModal5" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item"  src="https://www.youtube.com/embed/4EpP6vExhH0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="logo">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-7" id="third">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Crafting
+                        <br/>
+                        Global
+                        <br/>
+                        African
+                        <br/>
+                        Brands
+                    </h1>
+                    <p>
+                        In this new era where authentic African storytelling is on the<br/> rise, does your brand speak African?
+                    </p>
+                    <div class="link">
+                        <a  href="insight-on-brand.html#myModal7" class="" data-toggle="modal">Download report<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                        <a href="insight-on-brand.html#myModal6" class="" data-toggle="modal">Watch video<img class="play" src="https://img.icons8.com/ios/20/ffffff/play--v1.png"/></a>
+                    </div>
+                     
+                </div>
+                 <div id="myModal6" class="modal fade" style="width: auto !important ">
+                        <div class="modal-dialog">
+                            <div class="modal-content"> 
+                                <div class="modal-body">                    
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe id="cartoonVideo" class="embed-responsive-item" src="https://www.youtube.com/embed/gTLUPCTOvD4" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="logo seven">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+            <div class="group-13">
+                <div class="bg"></div>
+                <div class="info">
+                    <h1>
+                        Talk to us
+                    </h1>
+                    <div class="contacts">
+                        <p><span><i class="fas fa-map-marker-alt"></i></span>17/19 Oduduwa Street, G.R.A Ikeja, Lagos, Nigeria.</p>
+                        <p><span><i class="fas fa-phone-square-alt"></i></span>01-2714931-5</p>
+                        <p><span><i class="fas fa-envelope"></i></span>info@insightpublicis.com</p>
+                        <p><span><i class="fas fa-globe"></i></i></span>www./insightpublicis.com</p>
+                        <div class="socials">
+                            <a ><i class="fab fa-facebook"></i></a>
+                            <a ><i class="fab fa-twitter"></i></a>
+                            <a ><i class="fab fa-linkedin"></i></a>
+                            <a ><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo one">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="upper-footer">
+                <div>
+                    <p>Subscribe to our newsletter</p>
+                                    <form method="POST" action="https://www.insightpublicis.com/store-newsletter" id="contactUsForm">
+                    <input type="hidden" name="_token" value="lWdCA84efSKONvHuPyl9nV30QKHzV9RsjyS2btIX">                    <div>
+                        <input type="email" name="email" id="email" placeholder="Enter email address" required="required">
+                        <button type="submit" name="">
+                            <i class="fas fa-long-arrow-alt-right"></i>
+                        </button>
+                    </div>
+                    <form>
+                </div>
+                <div class="upper-footer-div2">
+                    <style></style>
+                    <span>
+                         <p href="/"> Home</p>
+                    </span>
+                    <span>
+                        <p>Blog</p>
+                    </span>
+                    <span>
+                        <p>Page</p>
+                    </span>
+                    <span>
+                        <p>Company</p>
+                    </span>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="logo">
+                    <img src="https://www.insightpublicis.com/assets/webP&#32;(4).webp" alt="">
+                </div>
+                <div class="socials">
+                    <span><i class="fab fa-facebook"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </div>
+                <p>Copyright <span><i class="far fa-copyright lower-i"></i></span>2021 Zuka. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
+<script>
+const modalMsg = document.getElementById("success_message");
+if ($("#contactUsForm").length > 0) {
+$("#contactUsForm").validate({
+rules: {
+first_name: {
+required: true,
+maxlength: 20
+},
+last_name: {
+required: true,
+maxlength: 20
+},
+email: {
+required: true,
+maxlength: 50,
+email: true,
+},  
+company: {
+required: true,
+maxlength: 20
+},
+designation: {
+required: true,
+maxlength: 20
+},   
+},
+
+messages: {
+first_name: {
+required: "Please enter first name",
+maxlength: "Your first name maxlength should be 20 characters long."
+},
+last_name: {
+required: "Please enter last name",
+maxlength: "Your last name maxlength should be 20 characters long."
+},
+email: {
+required: "Please enter valid a email",
+email: "Please enter valid email",
+maxlength: "The email name should less than or equal to 50 characters",
+},   
+company: {
+required: "Please enter company",
+maxlength: "Your company name maxlength should be 20 characters long."
+},
+designation: {
+required: "Please enter designation",
+maxlength: "Your designation maxlength should be 20 characters long."
+},
+
+},
+submitHandler: function(form) {
+$.ajaxSetup({
+headers: {
+'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+}
+});
+$('#submit').html('Please Wait...');
+$("#submit"). attr("disabled", true);
+$.ajax({
+url: "https://www.insightpublicis.com/store-form",
+type: "POST",
+data: $('#contactUsForm').serialize(),
+success: function( response ) {
+$('#submit').html('Submit');
+$("#submit"). attr("disabled", true);
+// alert('Personal information has been submitted successfully');
+modalMsg.classList.add("alert");
+modalMsg.innerText = "Personal information has been submitted successfully! \n Report has been sent to your email address";
+// document.getElementById("contactUsForm").reset(); 
+setTimeout(() => {
+    window.location.reload()
+}, 5000); 
+}
+});
+}
+})
+}
+</script>

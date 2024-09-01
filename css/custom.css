@@ -1,0 +1,244 @@
+        section.team {
+        height: 800px;
+        background-image: url("../assets/team.webp");
+        /*background-repeat: repeat;*/
+        background-size: contain;
+        background-position:  center center;
+        }
+        
+        .modal-open .modal {
+            overflow-x: hidden;
+            overflow-y: auto;
+            top: 120px;
+        }
+        section.great__work__section div.work__head p.h3 {
+                font-weight: 550;
+                font-size: 42px;
+                color: #000 !important;
+                text-align: center;
+            }
+        div.shapers__head {
+            text-align: center;
+            }
+            
+        .parent {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+
+        .image2 {
+          position: absolute;
+            top: 45%;
+            right: 0;
+            left: 45%;
+            bottom: 0;
+        }
+
+        p.teamsh3 {
+            color: #fff !important;
+            font-weight: 400;
+            padding-top: 150px;
+            font-size: 38px;
+            line-height: 40px;
+        }
+  
+          section.great__work__section{
+            height: 100%;
+          }
+        
+        /*div.work__head {*/
+        /*    margin-top: 80px;*/
+        /*    margin-bottom: 60px;*/
+        /*}*/
+        p.h3 {
+            font-weight: 550;
+            font-size: 42px;
+            color: #000;
+            text-align: center;
+        }
+
+    
+        div.item__meta {
+            margin-top: 10px;
+        }
+            span.text-muted {
+                padding-top: 10px;
+            }
+    
+            p.h4 {
+                font-size: 20px;
+                font-weight: 600;
+            }
+        
+
+            div.work__body {
+                margin-bottom: 80px;
+            }
+                div.col-lg-6.col-md-6:nth-child(2),
+                div.col-lg-6.col-md-6:nth-child(4) {
+                    margin-bottom: 100px;
+                }
+        
+                div.item__image {
+                    img {
+                        border-radius: 1% !important;
+                    }
+                }
+                div.team {
+                    img {
+                        border-radius: 1% !important;
+                    }
+                }
+
+    div.work__row {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+        
+        div.item__meta {
+            padding-top: 30px;
+        }
+
+    @media screen and (max-width: 789px){
+        .mobile_container {
+            max-width: 95% !important;
+        }
+        
+        div.team > img {
+            width: 90 !important;
+        }
+         section.team {
+            height: 400px;
+            background-position: center;
+            background-size: cover !important;
+          }
+    }
+        
+    @media screen and (min-width: 789px) {
+        div.team > img {
+            width: 500px;
+        }
+
+    }
+    
+    .work__video{
+        display: block;
+        width: 100%;
+        }
+
+        p.h5{
+            font-weight: 350;
+            font-size: 32px;
+            color: #000;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        p.h3{
+            font-weight: 450;
+        }
+        
+        .project{
+            margin-left: 23%; 
+            margin-right: 23%; 
+            text-align: center
+        }
+        
+         .header1{
+               color: #fff !important;
+                font-weight: 900;
+                padding-top: 250px;
+                font-size: 5em;
+                line-height: 80px;
+                text-align: center;
+        }
+        .header6{
+                color: #fff !important;
+                font-weight: 100;
+                padding-top: 20px;
+                font-size: 18px;
+                line-height: 20px;
+                text-align: center;
+        }
+        @media only screen and (max-width: 600px) {
+
+            .project{
+                margin-left: 5%; 
+                margin-right: 5%; 
+                text-align: center
+            }
+            .header1{
+                    font-size: 3em !important;
+                    line-height: 40px !important;
+            }
+            
+            .image2 {
+                position: absolute;
+                height: 40px;
+            }
+ 
+        }
+        
+        
+        @media screen and (min-width: 789px) {
+             p.teamsh3 {
+
+            padding-top: 350px;
+            color: #fff !important;
+            font-size: 70px;
+        
+        }
+        
+            .modal-content {
+    background-color: #000 !important;
+    width: 900px !important;
+    }
+/*    .modal {*/
+/*    width: 80% !important;*/
+/*}*/
+        }
+        .center{
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+        }
+        
+         p.h5{
+            font-weight: 350;
+            font-size: 32px;
+            color: #000;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #817b7b;
+            }
+        p.paragraph{
+            text-align: center;
+            margin-top: -20px;
+            color: #fff;
+            }
+        section.dark{
+            background-color: #000000d9 !important;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            }
+            
+    section.end__thinking div.thinking__head p.h3 {
+    font-weight: 420;
+    font-size: 38px;
+}
+
+.never-ending {
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 18px;
+    color: #fff !important;
+}
+
+.homepanel h2,
+#homepanel-commands a h2 {
+    font-weight: 300 !important;
+}
