@@ -1004,20 +1004,17 @@ width:device-width
 	background-repeat: no-repeat
 }
 .uk-cover {
-	overflow: hidden
+	overflow: hidden;
+	background-color: #000
 }
+
 .uk-cover-object {
 	width: auto;
-	height: auto;
-	min-width: 100%;
-	min-height: 100%;
-	max-width: none;
-	position: relative;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%)
+	background-color: #000;
+	height: 30%;
 }
+
+
 [data-uk-cover] {
 	position: relative;
 	left: 50%;
@@ -6322,3 +6319,24 @@ h2, h3 {
 	.campagna-template-default h2.more-proj { font-size: 28px; line-height: 36px; }
 }
 
+
+
+@media (min-width:680px) {
+	.uk-cover {
+		background-color: none;
+		}
+	
+		.uk-cover-object {
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			max-width: none;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%)
+		}
+	
+	}

@@ -13,6 +13,9 @@
     
     <link rel="stylesheet" href="css/custom.css">
 
+    <!-- tailwind css -->
+    <link href="./css/output.css" rel="stylesheet">
+
     <!-- Font Awesome Icon -->
     <script src="https://kit.fontawesome.com/6e47be172b.js" crossorigin="anonymous"></script>
 
@@ -165,8 +168,7 @@ $(document).ready(function(){
   <div class="uk-slidenav-position visore uk-flex uk-flex-middle" data-uk-slideshow="{ animation: 'fade', autoplayInterval: 5000, autoplay: true, videomute: false, pauseOnHover: false }">
      <ul class="uk-slideshow uk-slideshow-fullscreen uk-overlay-active">
         <li class="uk-cover">
-            <video class="uk-cover-object" preload="true" autoplay="true" loop="loop" muted
-               style="width: 100%; height: 100%; object-fit: cover;">
+            <video class="uk-cover-object" preload="true" autoplay="true" loop="loop" muted>
                <source src="assets/videos/digitalAdvert.mp4" type="video/mp4">
             </video>
            <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
@@ -187,7 +189,7 @@ $(document).ready(function(){
            </div>
         </li>
         <li class="uk-cover">
-           <video class="uk-cover-object" preload="true" autoplay="true" loop="loop" muted style="object-fit: cover;">
+           <video class="uk-cover-object" preload="true" autoplay="true" loop="loop" muted>
               <source src="assets/videos/targetai.mp4" type="video/mp4" width="600" height="400">
            </video>
            <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
@@ -229,7 +231,7 @@ $(document).ready(function(){
          </div>
         </li>
         <li class="uk-cover">
-           <img class="uk-cover-object" preload="true" src="./assets/images/aipower.jpg"  width="600" height="400" />
+           <img preload="true" src="./assets/images/aipower.jpg" class="uk-cover-object"/>
            <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
               <div class="homepanel">
                  <h3>Experience our AI Power</h3>
